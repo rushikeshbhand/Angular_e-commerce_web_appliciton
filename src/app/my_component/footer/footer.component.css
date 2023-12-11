@@ -1,11 +1,11 @@
 /* footer.component.css */
 
 footer {
-    background-color: #6F2CF5; 
+    background-color: #6F2CF5;
     color: #fff;
     padding: 20px 0;
   }
-  
+
   .footer-container {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next row */
@@ -28,7 +28,7 @@ footer {
   .footer-section a {
     position: relative;
   }
-  
+
   .footer-section a::before {
     content: "";
     position: absolute;
@@ -39,91 +39,50 @@ footer {
     background-color: white;
     transition: width 0.3s ease-in-out;
   }
-  
+
   .footer-section a:hover::before {
     width: 100%;
   }
-  
-  /* .footer-section h3 {
-    font-size: 1.5em;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-  } */
-  
+
   ul {
     list-style: none;
     padding: 0;
   }
-  
+
   ul li {
     margin-bottom: 8px;
   }
-  
+
   ul li a {
     text-decoration: none;
     color: #fff;
   }
 
-  
+
   .social-icons a {
     color: #fff;
     margin-right: 10px;
     font-size: 1.5em;
   }
-  
+
   .copyright {
     text-align: center;
     margin-top: 20px;
   }
-  
+
+  .fab{
+    text-decoration: none;
+  }
   /* Media queries for responsiveness */
   @media screen and (max-width: 767px) {
     .footer-container {
       flex-direction: column; /* Stack items vertically on smaller screens */
     }
-  
+
     .footer-section {
       margin-bottom: 10px; /* Reduce space between sections */
     }
   }
-
-  .fa {
-    padding: 5px;
-    font-size: 30px;
-    width: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
+  .social-icons{
+    text-decoration:none;
   }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-  
-  .fa-pinterest {
-    background: #cb2027;
-    color: white;
-  }
-  
-  .fa-snapchat-ghost {
-    background: #fffc00;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-  

@@ -1,83 +1,94 @@
-/* styles.css */
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 3vmax;
-  }
-  
-  section {
-    max-width: 800px;
-    width: 100%;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #333;
-    box-sizing: border-box;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    color: #666;
-  }
-  
-  form {
-    margin-top: 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  background-color: #6f2cf5;
+  color: #fff;
+  padding: 20px;
+}
+
+.ecom {
+  margin: 0;
+  font-size: 2em;
+}
+
+.title {
+  font-size: 1.2em;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h2 {
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.custom-button {
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #6f2cf5;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button:hover::before {
+  transform: translateX(100%);
+}
+
+@media only screen and (max-width: 600px) {
   input,
   textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
   }
-  
-  button {
-    background-color: #6f2cf5;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px
-  }
-  
-  button:hover {
-    background-color: #7f45f4;
-  }
-  
-  /* Responsive Styles */
-  @media only screen and (max-width: 600px) {
-    section {
-      padding: 10px;
-    }
-  }
-  
+}
+
+.body{
+  border: #6f2cf5 solid ;
+}

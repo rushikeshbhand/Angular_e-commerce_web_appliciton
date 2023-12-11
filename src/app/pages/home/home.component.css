@@ -98,7 +98,6 @@ a:hover{
 .product h3 {
     margin-top: 10px;
 }
-
 .product button {
     background-color: #6f2cf5;
     color: #fff;
@@ -118,3 +117,138 @@ a:hover{
     background-color: #fff;
 }
 
+.video-background{
+  width: 10vw;
+  height: 70vh;
+}
+
+/* p.image {
+  background-image: url('../../../assets/images/img30.jpeg.png');
+  height: 40vmax;
+} */
+
+/* Your component's CSS file or global stylesheet */
+
+/* .video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it to the background */
+/* } */
+
+/* video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+} */
+
+/* FAQ */
+/* home.component.css */
+h2{
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.question {
+  padding: 15px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question:hover {
+  background-color: #e0e0e0;
+}
+
+.question-text {
+  font-weight: bold;
+}
+
+.toggle-icon {
+  font-size: 20px;
+}
+
+.answer {
+  padding: 15px;
+  display: none;
+}
+
+.faq-heading{
+  padding-top: 60px;
+}
+.answer p {
+  margin: 0;
+}
+
+.answer.show {
+  display: block;
+}
+
+
+/* flip */
+/* styles.css */
+
+.root {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-left: 600px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}

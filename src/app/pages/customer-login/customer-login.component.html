@@ -1,0 +1,16 @@
+<!-- customer-login.component.html -->
+<section class="login-container">
+  <h2>Customer Login</h2>
+  <form id="loginForm" (ngSubmit)="customerLogin()" method="post">
+    <label for="customerEmail">Enter your email:</label>
+    <input type="email" id="customerEmail" name="customerEmail" [(ngModel)]="customer.customerEmail" required>
+
+    <label for="customerPassword">Password:</label>
+    <input type="password" id="customerPassword" name="customerPassword" [(ngModel)]="customer.customerPassword" required>
+
+    <!-- Display error message -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <button type="submit" class="login-button">Login</button>
+  </form>
+</section>
+

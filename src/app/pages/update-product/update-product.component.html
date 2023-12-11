@@ -1,0 +1,32 @@
+<!-- Update Product Form -->
+<div class="container">
+  <div class="form-container">
+    <h2>Update Product</h2>
+
+    <form (ngSubmit)="updateProduct()">
+      <label for="productId">Product ID:</label>
+      <input type="number" id="productId" name="productId" required [(ngModel)]="product.productId">
+
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required [(ngModel)]="product.productName">
+
+      <label for="productDescription">Product Description:</label>
+      <textarea id="productDescription" name="productDescription" required [(ngModel)]="product.productDescription"></textarea>
+
+      <label for="productPrice">Product Price:</label>
+      <input type="number" id="productPrice" name="productPrice" required [(ngModel)]="product.productPrice">
+
+      <label for="productImage">Product Image URL:</label>
+      <input type="text" id="productImage" name="productImage" required [(ngModel)]="product.productImage">
+
+      <label for="productSpecification">Product Specification:</label>
+      <textarea id="productSpecification" name="productSpecification" required [(ngModel)]="product.productSpecification"></textarea>
+
+      <label for="productBrand">Product Brand:</label>
+      <input type="text" id="productBrand" name="productBrand" required [(ngModel)]="product.productBrand">
+
+      <button type="submit" class="custom-button">Update Product</button>
+    </form>
+  </div>
+</div>
+

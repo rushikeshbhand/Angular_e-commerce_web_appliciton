@@ -1,0 +1,33 @@
+<!-- manage-customers.html -->
+<div class="container">
+  <p class="heading">Manage Customers</p>
+
+  <div class="button-container">
+    <div class="button-row delete-row">
+      <label for="customerToDelete">Customer to Delete:</label>
+      <input type="text" id="customerToDelete" name="customerToDelete" placeholder="Enter customer to delete" [(ngModel)]="customerToDelete" />
+      <button class="custom-button" (click)="deleteCustomer()">Delete Customer</button>
+    </div>
+
+    <!-- Update the HTML to display customers with email -->
+<div class="button-row show-all-customers-row">
+  <button class="custom-button" (click)="getAllCustomersWithEmail()">Show All Customers</button>
+  <div class="customer-list">
+      <h3>All Customers:</h3>
+      <ul>
+          <li *ngFor="let customer of customersWithEmail">{{ customer.customerId }} - {{ customer.customerEmail }}</li>
+      </ul>
+  </div>
+</div>
+
+    <!-- <div class="button-row show-all-customers-row">
+      <button class="custom-button" (click)="getAllCustomers()">Show All Customers</button>
+      <div class="customer-list">
+        <h3>All Customers:</h3>
+        <ul>
+          <li *ngFor="let customer of allCustomers">{{ customer.customerId }} - {{ customer.customerFirstName }} {{ customer.customerLastName }}</li>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+</div>

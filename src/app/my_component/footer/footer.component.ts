@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {  } from '@fortawesome/angular-fontawesome';
+
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+
 
 }

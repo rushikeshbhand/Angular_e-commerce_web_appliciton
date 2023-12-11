@@ -1,0 +1,39 @@
+<div class="container">
+  <p class="heading">Manage Products</p>
+
+  <div class="button-container">
+      <div class="button-row">
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName" name="productName" placeholder="Enter product name" [(ngModel)]="newProduct.productName">
+
+          <label for="productDescription">Product Description:</label>
+          <textarea id="productDescription" name="productDescription" placeholder="Enter product description" [(ngModel)]="newProduct.productDescription"></textarea>
+
+          <label for="productPrice">Product Price:</label>
+          <input type="number" id="productPrice" name="productPrice" placeholder="Enter product price" [(ngModel)]="newProduct.productPrice">
+
+          <label for="productImage">Product Image URL:</label>
+          <input type="text" id="productImage" name="productImage" placeholder="Enter product image URL" [(ngModel)]="newProduct.productImage">
+
+          <label for="productSpecification">Product Specification:</label>
+          <textarea id="productSpecification" name="productSpecification" placeholder="Enter product specification" [(ngModel)]="newProduct.productSpecification"></textarea>
+
+          <label for="productBrand">Product Brand:</label>
+          <input type="text" id="productBrand" name="productBrand" placeholder="Enter product brand" [(ngModel)]="newProduct.productBrand">
+
+          <label for="category">Select Category:</label>
+          <select id="category" name="category" [(ngModel)]="newProduct.category">
+              <option value="1">Electronics</option>
+              <option value="2">Clothing</option>
+              <option value="3">tiles</option>
+              <option value="4">Groceries</option>
+              <option value="5">Games</option>
+              <option value="6">Sport</option>
+              <option value="7">phone</option>
+          </select>
+
+          <button class="custom-button" (click)="addProduct()">Add Product</button>
+      </div>
+
+  </div>
+</div>

@@ -1,7 +1,9 @@
 // login.component.ts
-import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,24 +11,26 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  user = {
-    username: '',
-    password: ''
-  };
+  admin: any = {};
+  errorMessage: string = '';
 
-  constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private authService: AuthService, private router: Router) {}
 
-  login() {
-    alert('form submited successfully');
-    this.userService.login(this.user).subscribe(
-      (response: any) => {
-        // Handle successful login, navigate to the home page
-        this.router.navigate(['/home']);
+
+  login(): void {
+    this.userService.login(this.admin).subscribe(
+      (token: string) => {
+        localStorage.setItem('adminToken', token);
+        this.router.navigate(['/admin-dashboard']);
       },
       (error) => {
-        // Handle login error, show an error message to the user
-        console.error('Login failed:', error);
+        if (error instanceof HttpErrorResponse && error.status === 200) {
+          console.log('Login successful');
+        } else {
+          this.errorMessage = 'Invalid email or password';
+        }
       }
     );
   }
+
 }

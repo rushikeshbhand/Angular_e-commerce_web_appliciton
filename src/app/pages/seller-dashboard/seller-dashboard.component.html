@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seller Dashboard - Ecom</title>
-</head>
-
-<body>
-  <header>
-    <h1>Seller Dashboard</h1>
-  </header>
-
-  <section class="dashboard-container">
-    <div class="stats">
-      <h2>Statistics</h2>
-      <!-- Add your statistics here -->
-      <p>Total Sales: $50,000</p>
-      <p>Number of Orders: 100</p>
+<div class="container">
+  <p class="heading">Seller Dashboard</p>
+  <div class="button-container">
+    <div class="button-row">
+      <h2>Welcome to Your Seller Dashboard</h2>
     </div>
-
-    <div class="orders">
-      <h2>Recent Orders</h2>
-      <!-- Add a list of recent orders here -->
-      <ul>
-        <li>Order #1234 - $150.00</li>
-        <li>Order #1233 - $80.00</li>
-        <li>Order #1232 - $120.00</li>
-      </ul>
+    <div class="dashboard-section">
+      <h3>Product Management</h3>
+      <div class="add-product-btn">
+        <p class="paragraphs">Click here to add product:</p>
+        <button class="custom-button" (click)="addProduct()">Add New Product</button>
+      </div>
+      <div class="update-product-btn">
+        <p class="paragraphs">Click here to update product:</p>
+        <button class="custom-button" (click)="editProducts()">Edit Products</button>
+      </div>
     </div>
-  </section>
-</body>
-
-</html>
+  </div>
+</div>

@@ -1,1 +1,14 @@
-<p>order works!</p>
+<!-- order.component.html -->
+<div>
+ <h2>Your orders</h2>
+</div>
+<div *ngFor="let item of orderItems" class="order-item">
+  <img [src]="item.product.productImage" alt="{{ item.product.productName }}" />
+  <div class="item-details">
+    <h3>{{ item.product.productName }}</h3>
+    <p class="price">Price: {{ item.product.productPrice }}</p>
+    <p class="quantity">Quantity: {{ item.quantity }}</p>
+    <p class="total-price">Total Price: {{ item.totalPrice }}</p>
+  </div>
+</div>
+

@@ -1,0 +1,34 @@
+<!-- manage-products.component.html -->
+<div class="container">
+  <p class="heading">Manage Products</p>
+
+  <!-- Add Product Section -->
+  <div class="button-row">
+    <button class="custom-button" routerLink="/add-product">Add Product</button>
+  </div>
+
+  <!-- Update Product Section -->
+  <div class="button-row update-row">
+    <button class="custom-button" routerLink="/update-product">Update Product</button>
+  </div>
+
+  <!-- Delete Product Section -->
+  <div class="button-row delete-row">
+    <label for="productToDelete">Product to Delete:</label>
+    <input type="text" id="productToDelete" name="productToDelete" placeholder="Enter product to delete" [(ngModel)]="productToDelete"/>
+    <button class="custom-button productToDelete" (click)="deleteProduct()">Delete Product</button>
+  </div>
+
+  <!-- Show All Product Section -->
+  <div class="button-row show-all-product-row">
+    <button class="custom-button" (click)="getAllProducts()">Show All Products</button>
+    <div class="product-list">
+      <h3>All Products:</h3>
+      <ul>
+        <li *ngFor="let product of allProducts">
+          {{ product.productId }} - {{ product.productName }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

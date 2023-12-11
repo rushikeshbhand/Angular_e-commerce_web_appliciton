@@ -1,0 +1,20 @@
+<!-- products-dashboard.component.html -->
+<!-- <div class="heading">
+  <span class="scrolling-text">Products Dashboard</span>
+</div> -->
+
+<div class="product-container">
+  <div *ngFor="let product of products" class="product-card" (click)="viewProductDetails(product)">
+    <img [src]="product.productImage" alt="{{ product.productName }}" />
+    <div class="product-details">
+      <h3>{{ product.productName }}</h3>
+      <p class="description">{{ product.productDescription }}</p>
+      <p class="price">Price: {{ product.productPrice }}</p>
+      <div class="buttons">
+        <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+        <button class="buy-now" (click)="buyNow(product)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+

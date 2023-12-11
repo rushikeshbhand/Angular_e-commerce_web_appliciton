@@ -1,16 +1,4 @@
-<!-- src/app/navbar/navbar.component.html -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Ecom.shop</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body class="bodyclass">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="home">Ecom.shop</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,11 +10,11 @@
           <li class="nav-item">
             <a class="nav-link active" routerLink="home" aria-current="page">Home</a>
           </li>
-          
+
           <li class="nav-item">
-            <a class="nav-link active" routerLink="categories" aria-current="page">Product Categories</a>
+            <a class="nav-link active" routerLink="/products-home-page" aria-current="page">Products</a>
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link active" routerLink="cart">Cart</a>
           </li>
@@ -36,28 +24,47 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" routerLink="seller-dashboard">Become a seller</a>
+            <a class="nav-link active" routerLink="seller-login-signup">Become a seller</a>
+          </li>
+
+          <!-- Admin login and logout feature -->
+          <li class="nav-item" *ngIf="!isLoggedIn()">
+            <a class="nav-link active" routerLink="login">Admin login</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <a class="nav-link active" (click)="logout()">Logout</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" routerLink="admin-dashboard">Admin dashboard</a>
+            <a class="nav-link active" routerLink="customer-login-signup">Login/Signup</a>
           </li>
 
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="customer-login">Customer-Login/Signup</a>
+          </li> -->
+          <!--
           <li class="nav-item">
-            <a class="nav-link active" routerLink="login">Login</a>
-          </li>
+            <a class="nav-link active" routerLink="add-products">Add product</a>
+          </li> -->
 
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="signup">Signup</a>
-          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink="manage-products">Manage product</a>
+          </li> -->
 
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search">
+        <form class="d-flex" role="search" (ngSubmit)="searchProducts()">
+          <input class="form-control me-2" type="search" placeholder="Search Products" aria-label="Search" [(ngModel)]="searchQuery" name="searchQuery">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
+
+     <!-- Add this to your navbar.component.html -->
+      <div class="auto-suggestion" *ngIf="searchResults.length > 0">
+        <ul>
+          <li *ngFor="let result of searchResults" (click)="selectAutoSuggestion(result)">
+            <span [innerHTML]="highlightSearchQuery(result.productName)"></span>
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
   </nav>
-</body>
-</html>

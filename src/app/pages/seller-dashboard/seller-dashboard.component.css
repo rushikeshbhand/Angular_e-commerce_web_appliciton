@@ -1,53 +1,79 @@
-/* styles.css */
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .dashboard-container {
-    display: flex;
-    justify-content: space-around;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .stats,
-  .orders {
-    flex: 1;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  /* Responsive Styles */
-  @media only screen and (max-width: 600px) {
-    .dashboard-container {
-      flex-direction: column;
-    }
-  }
-  
+.heading {
+  text-decoration: underline black 2px;
+  font-size: 2.1vmax;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.custom-button,
+h2,
+h3 {
+  width: 100%;
+}
+
+.custom-button {
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #6f2cf5;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button:hover::before {
+  transform: translateX(100%);
+}
+
+.dashboard-section {
+  gap: 0px;
+}
+
+.update-product-btn{
+  margin-top: 30px;
+}
+
+.paragraphs{
+  font-size: 20px;
+}
+
+h3{
+  text-decoration: underline black solid;
+  margin-bottom: 40px;
+}

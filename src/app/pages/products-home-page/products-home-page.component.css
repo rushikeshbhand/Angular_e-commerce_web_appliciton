@@ -1,0 +1,89 @@
+/* Add this style to your CSS file */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: calc(25% - 20px); /* Set fixed width for desktop (4 products per row) */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+
+  /* For mobile responsiveness (1 product per row) */
+  @media (max-width: 767px) {
+    width: calc(100% - 20px);
+  }
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 8px;
+}
+
+.add-to-cart,
+.buy-now {
+  padding: 10px 20px; /* Adjusted padding for better button size */
+  margin-right: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+  background-color: #4caf50; /* Green color for Add to Cart button */
+}
+
+.buy-now {
+  background-color: #2196f3; /* Blue color for Buy Now button */
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  background-color: #45a049; /* Darker green for hover effect */
+}
+
+/* heading css
+.heading {
+  background-color: #6f2cf5;
+  text-align: center;
+  padding: 10px;
+  font-size: 2vw;
+  color: white;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  animation: scroll 10s linear infinite;
+  /* white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+

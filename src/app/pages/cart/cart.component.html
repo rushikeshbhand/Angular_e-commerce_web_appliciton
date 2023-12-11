@@ -1,1 +1,21 @@
-<p>cart works!</p>
+<!-- cart.component.html -->
+<div class="cart-container root">
+  <h3>Ecom Cart</h3>
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <img [src]="item.product.productImage" alt="{{ item.product.productName }}" />
+    <div class="item-details">
+      <h3>{{ item.product.productName }}</h3>
+      <p class="price">Price: {{ item.product.productPrice }}</p>
+      <p class="quantity">Quantity: {{ item.quantity }}</p>
+    </div>
+    <div class="cart-buttons">
+      <button class="remove-button" (click)="removeFromCart(item)">Remove</button>
+      <input class="quantity-input" type="number" [(ngModel)]="item.quantity" (change)="updateQuantity(item)">
+    </div>
+  </div>
+  <div class="cart-summary">
+    <p>Total Quantity: {{ getTotalQuantity() }}</p>
+    <p>Total Amount: ₹{{ getTotalAmount() | number: '1.2-2' }}</p>
+  </div>
+</div>
+

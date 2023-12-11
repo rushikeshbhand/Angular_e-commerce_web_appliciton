@@ -1,0 +1,41 @@
+/* order.component.css */
+
+div {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.order-item {
+  /* display: flexs */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  background-color: #fff; /* Background color for the order item */
+  margin-left: 28vw;
+  margin-right: 28vw;
+}
+
+.order-item img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+}
+
+.price, .quantity, .total-price {
+  margin: 5px 0;
+}
+
+.total-price {
+  font-weight: bold;
+  color: #007bff; /* Blue color for total price */
+}

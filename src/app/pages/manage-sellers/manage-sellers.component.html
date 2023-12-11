@@ -1,0 +1,22 @@
+<!-- manage-sellers.component.html -->
+<div class="container">
+  <p class="heading">Manage Sellers</p>
+
+  <div class="button-container">
+      <div class="button-row delete-row">
+          <label for="sellerToDelete">Seller to Delete:</label>
+          <input type="text" id="sellerToDelete" name="sellerToDelete" placeholder="Enter seller to delete" [(ngModel)]="sellerToDelete">
+          <button class="custom-button" (click)="deleteSeller()">Delete Seller</button>
+      </div>
+
+      <div class="button-row show-all-sellers-row">
+          <button class="custom-button" (click)="showAllSellers()">Show All Sellers</button>
+          <div class="seller-list">
+              <h3>All Sellers:</h3>
+              <ul>
+                  <li *ngFor="let seller of sellers">{{ seller.sellerFirstName }} ({{ seller.sellerEmail }})</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>

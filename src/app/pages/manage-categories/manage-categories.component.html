@@ -1,0 +1,62 @@
+<div class="container">
+  <p class="heading">Manage Categories</p>
+
+  <!-- Add Category Section -->
+  <div class="button-row">
+    <label for="newCategory">Add Category:</label>
+    <input type="text" class="input" id="newCategory" name="newCategory" placeholder="Enter category to add" [(ngModel)]="newCategory" />
+    <button class="custom-button" (click)="addCategory()">Add Category</button>
+  </div>
+
+  <!-- Update Category Section -->
+  <div class="button-row update-row">
+    <label for="categoryToUpdate">Update Category:</label>
+    <select
+      id="categoryToUpdate"
+      name="categoryToUpdate"
+      [(ngModel)]="selectedCategoryForUpdate"
+    >
+      <option
+        *ngFor="let category of allCategories"
+        [value]="category.categoryName"
+      >
+        {{ category.categoryName }}
+      </option>
+    </select>
+    <button
+      class="custom-button autofill-button"
+      (click)="autofillUpdateForm()"
+    >
+      Autofill Update Form
+    </button>
+    <input
+      type="text"
+      class="input"
+      id="updatedCategoryName"
+      name="updatedCategoryName"
+      placeholder="Enter updated category name"
+      [(ngModel)]="updatedCategoryName"
+    />
+    <button class="custom-button update-button" (click)="updateCategory()">
+      Update Category
+    </button>
+  </div>
+
+  <!-- Delete Category Section -->
+  <div class="button-row delete-row">
+    <label for="categoryToDelete">Category to Delete:</label>
+    <input type="text" class="input" id="categoryToDelete" name="categoryToDelete" placeholder="Enter category to delete" [(ngModel)]="categoryToDelete" />
+    <button class="custom-button deleteButton" (click)="deleteCategory()">Delete Category</button>
+  </div>
+
+  <!-- Show All Categories Section -->
+  <div class="button-row show-all-categories-row">
+    <button class="custom-button showAllCategoriesButton" (click)="getAllCategories()">Show All Categories</button>
+    <div class="category-list">
+      <h3>All Categories:</h3>
+      <ul>
+        <li *ngFor="let category of allCategories">{{ category.categoryId }} - {{ category.categoryName }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
