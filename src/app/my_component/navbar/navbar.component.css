@@ -1,0 +1,104 @@
+/* navbar.component.css */
+.navbar-brand{
+    font-family: Brush Script MT;
+    font-size: 25px;
+    color: white; /* Text color set to white */
+
+}
+
+.container-fluid {
+    background-color: #6F2CF5; /* Blue background color */
+  }
+  
+  .navbar-brand:hover {
+    padding-bottom: 1px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important; /* Text color set to white */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #0056b3; /* Change to your preferred hover text color */
+  }
+  
+  .navbar-toggler {
+    border-color: white; /* Change to your preferred color */
+  }
+  
+  .dropdown-menu {
+    background-color: #f8f9fa; /* Change to your preferred background color */
+  }
+  
+  .dropdown-item {
+    color: white !important; /* Text color set to white */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #007bff; /* Change to your preferred hover background color */
+    color: white !important; /* Text color set to white */
+  }
+  
+  .form-control {
+    margin-right: 10px; /* Adjust the margin as needed */
+    color: rgb(0, 0, 0) !important; /* Text color set to white */
+    width: auto; /* Set width to auto to allow horizontal alignment */
+  }
+  
+  .btn-outline-success {
+    color: white !important; /* Text color set to white */
+    border-color: #fcfcfc; /* Change to your preferred border color */
+  }
+  
+  .btn-outline-success:hover {
+    color: rgb(12, 11, 11) !important; /* Text color set to white */
+    background-color: #f4f9f5; /* Change to your preferred hover background color */
+    border-color: #0f120f; /* Change to your preferred hover border color */
+  }
+  
+  .d-flex{
+    margin-top: 1%;
+  }
+
+/* Add this style for the underline effect */
+.nav-item a {
+  position: relative;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item a:hover::before {
+  width: 100%;
+}
+
+
+/* search bar css */
+
+.form-control {
+    margin-right: 10px; /* Adjust the margin as needed */
+    color: rgb(0, 0, 0) !important; /* Text color set to white */
+    width: auto; /* Set width to auto to allow horizontal alignment */
+    transition: width 0.5s ease; /* Add transition for smooth width change */
+    text-align: center;
+  }
+  
+  .form-control:focus {
+    width: 33vmax; /* Adjust the width when the search bar is focused */
+  }
+
+  .navbar{
+    padding-top: 0%;
+  }
+
+
+
+  
