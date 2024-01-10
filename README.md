@@ -1,8 +1,7 @@
 # Ecom
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
-![Uploading Screenshot (33).png…]()
-
+![Screenshot (33)](https://github.com/rushikeshbhand/Angular_e-commerce_web_appliciton/assets/112516622/8f3c2135-be57-49c0-9913-58b833d9baa4)
 
 
 ## Development server
