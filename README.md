@@ -4,6 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Landing page- ![Screenshot (33)](https://github.com/rushikeshbhand/Angular_e-commerce_web_appliciton/assets/112516622/8f3c2135-be57-49c0-9913-58b833d9baa4)
 cart- ![Screenshot (46)](https://github.com/rushikeshbhand/Angular_e-commerce_web_appliciton/assets/112516622/0fad6a5b-ec75-4c0e-ae74-fc541ba02d85)
 mobile view- 
+
+
+
 ![Screenshot (45)](https://github.com/rushikeshbhand/Angular_e-commerce_web_appliciton/assets/112516622/ed9391ab-3168-4a79-abf9-3456d76f27bd)
 
 
