@@ -1,8 +1,3 @@
-<!-- products-dashboard.component.html -->
-<!-- <div class="heading">
-  <span class="scrolling-text">Products Dashboard</span>
-</div> -->
-
 <div class="product-container">
   <div *ngFor="let product of products" class="product-card" (click)="viewProductDetails(product)">
     <img [src]="product.productImage" alt="{{ product.productName }}" />

@@ -23,12 +23,17 @@ export class OrderService {
     return this.orderItemsSubject.asObservable();
   }
 
+  clearOrders() {
+    this.orderItems = [];
+    this.orderItemsSubject.next([...this.orderItems]);
+  }
+
   getOrderItems(): Observable<any[]> {
     return this.orderItemsSubject.asObservable();
   }
 
-  clearOrders() {
-    this.orderItems = [];
-    this.orderItemsSubject.next([...this.orderItems]);
+  addToOrder(item: any): void {
+    const currentOrderItems = this.orderItemsSubject.value;
+    this.orderItemsSubject.next([...currentOrderItems, item]);
   }
 }

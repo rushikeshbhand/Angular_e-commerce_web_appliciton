@@ -1,17 +1,17 @@
 // cart.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { OrderService } from '../../services/order.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-
 export class CartComponent implements OnInit {
-  cartItems: any[] = []; // Update the type based on your data structure
+  cartItems: any[] = [];
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private orderService: OrderService) {}
 
   ngOnInit() {
     this.getCartItems();
@@ -36,6 +36,13 @@ export class CartComponent implements OnInit {
     this.cartService.updateQuantity(item.product.productId, item.quantity);
   }
 
+  buyNow(item: any) {
+    // Move the item to the order
+    this.orderService.addToOrder(item);
+    // Remove the item from the cart
+    this.removeFromCart(item);
+  }
+
   getTotalQuantity(): number {
     return this.cartItems.reduce((total, item) => total + item.quantity, 0);
   }
@@ -44,4 +51,3 @@ export class CartComponent implements OnInit {
     return this.cartItems.reduce((total, item) => total + item.quantity * item.product.productPrice, 0);
   }
 }
-

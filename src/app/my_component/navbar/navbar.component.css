@@ -1,4 +1,3 @@
-/* navbar.component.css */
 .navbar-brand{
     font-family: Brush Script MT;
     font-size: 25px;
@@ -19,15 +18,15 @@
   }
 
   .navbar-nav .nav-link:hover {
-    color: #0056b3; /* Change to your preferred hover text color */
+    color: #0056b3; /*hover text color */
   }
 
   .navbar-toggler {
-    border-color: white; /* Change to your preferred color */
+    border-color: white;
   }
 
   .dropdown-menu {
-    background-color: #f8f9fa; /* Change to your preferred background color */
+    background-color: #f8f9fa; /*background color */
   }
 
   .dropdown-item {
@@ -35,32 +34,32 @@
   }
 
   .dropdown-item:hover {
-    background-color: #007bff; /* Change to your preferred hover background color */
+    background-color: #007bff; /*hover background color */
     color: white !important; /* Text color set to white */
   }
 
   .form-control {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
     color: rgb(0, 0, 0) !important; /* Text color set to white */
     width: auto; /* Set width to auto to allow horizontal alignment */
   }
 
   .btn-outline-success {
     color: white !important; /* Text color set to white */
-    border-color: #fcfcfc; /* Change to your preferred border color */
+    border-color: #fcfcfc; /*border color */
   }
 
   .btn-outline-success:hover {
     color: rgb(12, 11, 11) !important; /* Text color set to white */
-    background-color: #f4f9f5; /* Change to your preferred hover background color */
-    border-color: #0f120f; /* Change to your preferred hover border color */
+    background-color: #f4f9f5; /*hover background color */
+    border-color: #0f120f; /*hover border color */
   }
 
   .d-flex{
     margin-top: 1%;
   }
 
-/* Add this style for the underline effect */
+/*style for the underline effect */
 .nav-item a {
   position: relative;
 }
@@ -81,10 +80,10 @@
 }
 
 
-/* search bar css */
+/* search bar*/
 
 .form-control {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
     color: rgb(0, 0, 0) !important; /* Text color set to white */
     width: auto; /* Set width to auto to allow horizontal alignment */
     transition: width 0.5s ease; /* Add transition for smooth width change */
@@ -107,8 +106,6 @@
 
 
 
-/* Add this to your navbar.component.css or your global styles */
-
 .auto-suggestion {
   position: relative;
 }
@@ -121,7 +118,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   width: 100%;
-  top: 100%; /* Position the suggestions below the input */
+  top: 100%;
 }
 
 .auto-suggestion:hover .dropdown-content {
@@ -137,21 +134,20 @@
 .dropdown-content li {
   padding: 10px;
   cursor: pointer;
-  border-bottom: 1px solid #ddd; /* Add a border between suggestions */
+  border-bottom: 1px solid #ddd;
 }
 
 .dropdown-content li:last-child {
-  border-bottom: none; /* Remove border for the last suggestion */
+  border-bottom: none;
 }
 
 .dropdown-content li:hover {
   background-color: #f2f2f2;
 }
 
-/* Style for highlighting the search query in suggestions */
 .highlight {
   font-weight: bold;
-  color: #007bff; /* You can adjust the color as needed */
+  color: #007bff; 
 }
 
 

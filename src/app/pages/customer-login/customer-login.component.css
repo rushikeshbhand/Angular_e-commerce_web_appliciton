@@ -1,4 +1,3 @@
-/* customer-login.component.css */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -8,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Set min-height to ensure the form stays centered even if content is less */
+  min-height: 100vh; 
 }
 
 .login-container {

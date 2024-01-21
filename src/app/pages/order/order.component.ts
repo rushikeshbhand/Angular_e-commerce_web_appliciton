@@ -8,7 +8,7 @@ import { OrderService } from '../../services/order.service';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  orderItems: any[] = []; // Update the type based on your data structure
+  orderItems: any[] = [];
 
   constructor(private orderService: OrderService) {}
 
@@ -25,5 +25,16 @@ export class OrderComponent implements OnInit {
         console.error('Error fetching order items:', error);
       }
     );
+  }
+
+  cancelOrder(orderItem: any): void {
+    // Simulate order cancellation by removing the order item from the local array
+    const index = this.orderItems.findIndex((item) => item === orderItem);
+    if (index !== -1) {
+      this.orderItems.splice(index, 1);
+      console.log('Order canceled:', orderItem);
+    } else {
+      console.error('Order not found:', orderItem);
+    }
   }
 }

@@ -13,7 +13,6 @@ import { CartComponent } from './pages/cart/cart.component';
 import { OrderComponent } from './pages/order/order.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { SellerComponent } from './pages/seller/seller.component';
 import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
 import { SliderComponent } from './pages/slider/slider.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -34,7 +33,6 @@ import { AddProductComponent } from './pages/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/update-product/update-product.component';
 import { ProductsHomePageComponent } from './pages/products-home-page/products-home-page.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { ProductComponent } from './pages/product/product.component';
 
 
 @NgModule({
@@ -49,7 +47,6 @@ import { ProductComponent } from './pages/product/product.component';
     OrderComponent,
     ContactUsComponent,
     AboutUsComponent,
-    SellerComponent,
     SellerDashboardComponent,
     SliderComponent,
     AdminDashboardComponent,
@@ -67,7 +64,6 @@ import { ProductComponent } from './pages/product/product.component';
     UpdateProductComponent,
     ProductsHomePageComponent,
     ProductDetailsComponent,
-    ProductComponent,
   ],
   imports: [
     BrowserModule,
