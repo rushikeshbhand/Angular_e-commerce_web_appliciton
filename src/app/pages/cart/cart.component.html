@@ -11,6 +11,7 @@
     <div class="cart-buttons">
       <button class="remove-button" (click)="removeFromCart(item)">Remove</button>
       <input class="quantity-input" type="number" [(ngModel)]="item.quantity" (change)="updateQuantity(item)">
+      <button class="buy-now-button" (click)="buyNow(item)">Buy Now</button>
     </div>
   </div>
   <div class="cart-summary">
@@ -18,4 +19,3 @@
     <p>Total Amount: ₹{{ getTotalAmount() | number: '1.2-2' }}</p>
   </div>
 </div>
-

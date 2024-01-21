@@ -8,7 +8,7 @@ import { ProductDetailsService } from '../../services/product-details.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  productId!: number; // Use ! non-null assertion operator
+  productId!: number;
 
   productDetails: any;
 
@@ -16,7 +16,6 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap | null) => {
-      // Use optional chaining to handle possible null value
       this.productId = +params?.get('id')!;
       this.fetchProductDetails();
     });

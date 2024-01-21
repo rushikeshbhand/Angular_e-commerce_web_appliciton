@@ -14,7 +14,7 @@
 }
 
 .cart-item img {
-  max-width: 100px;
+  max-width: 140px;
   max-height: 100px;
   margin-right: 10px;
 }
@@ -37,6 +37,9 @@
   border-radius: 4px;
   cursor: pointer;
 }
+.remove-button:hover{
+  background-color: #c82929;
+}
 
 .quantity-input {
   margin-top: 5px;
@@ -50,3 +53,14 @@
   padding-bottom: ;
 
 } */
+.buy-now-button{
+  padding: 5px 7px;
+  background-color: green;
+  color: white;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.buy-now-button:hover{
+  background-color: rgb(9, 99, 9);
+}

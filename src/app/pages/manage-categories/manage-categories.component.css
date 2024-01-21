@@ -1,9 +1,7 @@
-/* manage-categories.component.css */
-
 .container {
     text-align: center;
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto; /* Center container */
+    max-width: 600px; 
+    margin: 0 auto;
     padding-left: 10vw;
     padding-right: 10vw;
     border: #ccc solid;
@@ -24,8 +22,8 @@
     gap: 25px; /* Increased gap between options */
     align-items: center;
     border: 2px solid #ccc; /* Border around the entire section */
-    padding: 20px; /* Add padding for visual separation */
-    border-radius: 8px; /* Rounded corners for a cleaner look */
+    padding: 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
     border-bottom: 2px solid #ccc;
   }
@@ -33,13 +31,13 @@
   .button-row {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Increased gap between elements */
+    gap: 15px;
   }
 
   .custom-button,
   label,
   input {
-    width: 100%; /* Make elements take full width */
+    width: 100%;
   }
 
   .custom-button {
@@ -52,7 +50,7 @@
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    word-wrap: break-word; /* Allow word wrapping */
+    word-wrap: break-word;
   }
 
   .custom-button::before {
@@ -72,7 +70,7 @@
 
   .category-list {
     margin-top: 10px;
-    padding-top: 3px; /* Add padding above the category list for visual separation */
+    padding-top: 3px; 
   }
 
   .category-list h3 {
@@ -86,7 +84,7 @@
 
   .category-list li {
     font-size: 16px;
-    white-space: normal; /* Allow word wrapping in list items */
+    white-space: normal;
   }
 
   .show-all-categories-row, .delete-row{

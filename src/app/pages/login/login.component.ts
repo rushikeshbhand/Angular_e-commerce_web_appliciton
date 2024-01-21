@@ -1,4 +1,3 @@
-// login.component.ts
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { UserService } from '../../services/user.service';

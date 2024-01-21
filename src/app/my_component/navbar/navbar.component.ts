@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
         }
       );
     } else {
-      this.searchResults = []; // Clear results if search query is empty
+      this.searchResults = []; // Clear results if search is empty
     }
   }
 

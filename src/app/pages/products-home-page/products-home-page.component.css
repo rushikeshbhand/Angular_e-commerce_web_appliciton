@@ -1,20 +1,19 @@
-/* Add this style to your CSS file */
 .product-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .product-card {
-  width: calc(25% - 20px); /* Set fixed width for desktop (4 products per row) */
+  width: calc(25% - 20px);
   margin: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+  transition: box-shadow 0.3s ease;
 
-  /* For mobile responsiveness (1 product per row) */
+ /* style for mobile view one product per row */
   @media (max-width: 767px) {
     width: calc(100% - 20px);
   }
@@ -39,7 +38,7 @@
 
 .add-to-cart,
 .buy-now {
-  padding: 10px 20px; /* Adjusted padding for better button size */
+  padding: 10px 20px;
   margin-right: 8px;
   cursor: pointer;
   border: none;
@@ -57,9 +56,12 @@
   background-color: #2196f3; /* Blue color for Buy Now button */
 }
 
-.add-to-cart:hover,
+.add-to-cart:hover
+{
+  background-color: #2196f3; /* Darker green for hover effect */
+}
 .buy-now:hover {
-  background-color: #45a049; /* Darker green for hover effect */
+  background-color: #4caf50;
 }
 
 /* heading css

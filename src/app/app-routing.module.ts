@@ -3,12 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './pages/cart/cart.component';
 import { OrderComponent } from './pages/order/order.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductsComponent } from './pages/products/products.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { SellerComponent } from './pages/seller/seller.component';
 import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { ManageCategoriesComponent } from './pages/manage-categories/manage-categories.component';
@@ -28,14 +26,12 @@ import { ProductsHomePageComponent } from './pages/products-home-page/products-h
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'admin-dashboard', component:AdminDashboardComponent},
-  { path: 'products', component: ProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'orders', component: OrderComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'contactus', component: ContactUsComponent},
   { path: 'aboutus', component: AboutUsComponent},
-  { path: 'seller', component: SellerComponent},
   { path: 'seller-dashboard', component: SellerDashboardComponent},
   { path: 'manage-categories', component: ManageCategoriesComponent},
   { path: 'manage-products', component: ManageProductsComponent},

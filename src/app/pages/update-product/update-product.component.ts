@@ -7,7 +7,7 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent {
-  product: any = {}; // Initialize an empty product object
+  product: any = {}; 
 
   constructor(private productService: ProductService) {}
 

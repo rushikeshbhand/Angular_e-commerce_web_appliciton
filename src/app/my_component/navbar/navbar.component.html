@@ -57,7 +57,6 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
 
-     <!-- Add this to your navbar.component.html -->
       <div class="auto-suggestion" *ngIf="searchResults.length > 0">
         <ul>
           <li *ngFor="let result of searchResults" (click)="selectAutoSuggestion(result)">
